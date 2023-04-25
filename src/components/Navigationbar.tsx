@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../assets/stacktrek_v1.png";
 import userprofilephoto from "../assets/John Michael Lagrana.png";
 
-
 const navbar = () => {
   return (
     <header>
@@ -15,7 +14,7 @@ const navbar = () => {
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="mobile-menu-2"
           ></div>
-          <div className="flex items-center md:order-2">      
+          <div className="flex items-center md:order-2">
             <button
               type="button"
               className="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -104,7 +103,6 @@ const navbar = () => {
         </div>
       </nav>
     </header>
-    
   );
 };
 

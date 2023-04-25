@@ -4,14 +4,12 @@ import App from "./App";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
-import Michael from "./pages/michael/introduction"
-
+import Michael from "./pages/michael/introduction";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-  
   },
   {
     path: "/Michael",
