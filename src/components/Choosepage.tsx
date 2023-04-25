@@ -4,8 +4,8 @@ const landingpage = () => {
   return (
     <div>
       <body>
-        <div className="upskillingbox">
-          <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div style={{ position: 'absolute', top: '300px', left: '500px'  }}>
+          <div className=" max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#upskill">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-center text-gray-900 dark:text-white">
                 FULL-STACK
@@ -46,7 +46,7 @@ const landingpage = () => {
             </a>
           </div>
         </div>
-        <div className="noncoderbox">
+        <div style={{ position: 'absolute', top: '300px', left: '1000px'  }}>
           <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#Proceed">
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-center text-gray-900  dark:text-white">
