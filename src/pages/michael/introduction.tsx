@@ -8,10 +8,10 @@ const introduction = () => {
       <Navigatiobar />
       <div>
         <a
-          href="#noteworthy-technology-acquisitions-2021"
-          className="block overflow-y-scroll min-w-min max-h-100 w-3/4 h-96 p-6  bg-white border
+          href="#welcome"
+          className="block overflow-y-scroll min-w-min w-3/4 h-64 sm:h-80 md:h-96 lg:h-120 xl:h-144 2xl:h-192 max-h-300 h-20  p-6  bg-white border
            border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700
-            dark:hover:bg-gray-700 mx-auto mt-6 mb-20"
+            dark:hover:bg-gray-700 mx-auto mt-6"
         >
           <center>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -97,7 +97,7 @@ const introduction = () => {
             <br />
           </p>
           <center>
-            <Link to="/MichaelQuiz1">
+            <Link to="/MichaelMP">
               <button
                 type="button"
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4
