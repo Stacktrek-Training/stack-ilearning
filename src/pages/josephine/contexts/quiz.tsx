@@ -1,7 +1,12 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 import questions from "../data";
 import { shuffleAnswers } from "../helpers";
-import { Question } from "../components/Questions";
+
+export type Question = {
+  question: string;
+  correctAnswer: string;
+  incorrectAnswers: string[];
+};
 
 interface State {
   questions: Question[];

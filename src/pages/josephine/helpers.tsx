@@ -1,4 +1,4 @@
-import { Question } from "./components/Questions";
+import { Question } from "./contexts/quiz";
 
 interface ShuffledAnswer {
   sort: number;
