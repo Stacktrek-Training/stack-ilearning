@@ -6,6 +6,10 @@ This project was bootstrapped with [Vite](https://vitejs.dev/) with React + Type
 
 In the project directory, you can run:
 
+### `npm install`
+
+This will install the packages under `package.json`. All of those dependencies are stored in `node_modules` directory.
+
 ### `npm start`
 
 Runs the app in the development mode.\
