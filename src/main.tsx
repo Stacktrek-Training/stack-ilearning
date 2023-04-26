@@ -4,7 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Michael from "./pages/michael/introduction";
-import MichaelQuiz1 from "./pages/michael/Quiz1"
+
 
 const router = createBrowserRouter([
   {
@@ -14,10 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/Michael",
     element: <Michael />,
-  },
-  {
-    path: "/MichaelQuiz1",
-    element: <MichaelQuiz1 />,
   },
 ]);
 
