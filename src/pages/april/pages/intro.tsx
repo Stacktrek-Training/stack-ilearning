@@ -21,9 +21,12 @@ function Intro() {
 
       <div className="text-black font-mono font-bold text-xl">
         <h1 className="mt-20 ml-20">
-          SQL is a standard language for accessing and manipulating databases.<br></br>
-          It is a standard language used for interacting with databases,<br></br> 
-          and it is supported by most relational database management systems (RDBMS).<br></br> 
+          SQL is a standard language for accessing and manipulating databases.
+          <br></br>
+          It is a standard language used for interacting with databases,
+          <br></br>
+          and it is supported by most relational database management systems
+          (RDBMS).<br></br>
           SQL is used to create, modify, and retrieve data from databases.
         </h1>
       </div>

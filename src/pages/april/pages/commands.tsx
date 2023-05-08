@@ -13,7 +13,7 @@ function Commands() {
       </div>
       <hr className="border-3 border-black my-4 mx-15" />
     </div>
-  )
+  );
 }
 
 export default Commands;

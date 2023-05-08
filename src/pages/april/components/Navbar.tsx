@@ -163,22 +163,22 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row justify-center items-center mt-20">
-        <div className="flex flex-row items-center mt-20">
-          <img
-            src={postgresql}
-            alt="postgresql"
-            className="w-80 h-80 object-cover"
-          ></img>
-          <img
-            src={mysql}
-            alt="mysql"
-            className="w-80 h-80 ml-10 object-cover"
-          ></img>
-          <img
-            src={mssql}
-            alt="mssql"
-            className="w-80 h-80 ml-10 object-cover"
-          ></img>
+          <div className="flex flex-row items-center mt-20">
+            <img
+              src={postgresql}
+              alt="postgresql"
+              className="w-80 h-80 object-cover"
+            ></img>
+            <img
+              src={mysql}
+              alt="mysql"
+              className="w-80 h-80 ml-10 object-cover"
+            ></img>
+            <img
+              src={mssql}
+              alt="mssql"
+              className="w-80 h-80 ml-10 object-cover"
+            ></img>
           </div>
         </div>
       </div>
