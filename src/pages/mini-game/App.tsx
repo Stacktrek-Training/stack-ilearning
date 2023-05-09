@@ -91,7 +91,7 @@ function App(): JSX.Element {
   const renderGameOver = (): JSX.Element => {
     return (
       <div className="game-over">
-        <h2>Game Over!</h2>
+        <h2>Congratulations!</h2>
         <p>Your final score is: {score}</p>
         <button
           onClick={resetGame}

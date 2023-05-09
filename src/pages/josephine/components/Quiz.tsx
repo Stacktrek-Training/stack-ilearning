@@ -41,14 +41,9 @@ const Quiz = () => {
       )}
       {!quizState.showResults && (
         <div>
-          {" "}
           <h1 className="text-2xl font-bold underline">Basic Linux Command</h1>
           <br></br>
-<<<<<<< HEAD
           <div className="score1">
-=======
-          <div className="score">
->>>>>>> 2ce9ddd50c99476483aa9a2a7331116a96f43c72
             Question {quizState.currentQuestionIndex + 1}/
             {quizState.questions.length}
           </div>

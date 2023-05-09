@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Question } from "./components/Questions";
-=======
-import { Question } from "./contexts/quiz";
->>>>>>> 2ce9ddd50c99476483aa9a2a7331116a96f43c72
 
 interface ShuffledAnswer {
   sort: number;
