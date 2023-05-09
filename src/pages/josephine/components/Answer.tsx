@@ -15,8 +15,7 @@ const Answer: React.FC<Props> = ({
   currentAnswer,
   correctAnswer,
 }) => {
-  const isCorrectAnswer =
-    currentAnswer && answerText === correctAnswer;
+  const isCorrectAnswer = currentAnswer && answerText === correctAnswer;
   const isWrongAnswer =
     currentAnswer === answerText && currentAnswer !== correctAnswer;
   const correctAnswerClass = isCorrectAnswer ? "correct-answer" : "";
