@@ -17,11 +17,11 @@ const router = createBrowserRouter([
     element: <Michael />,
   },
   {
-    path: "/josephine",
+    path: "/games/linux-command",
     element: <Josephine />,
   },
   {
-    path: "/minigame",
+    path: "/games/guess-the-logo",
     element: <Minigame />,
   },
 ]);
