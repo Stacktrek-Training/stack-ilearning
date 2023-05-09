@@ -1,12 +1,24 @@
-import React from 'react';
-import logo from "../assets/stacktrek_v1.png";
+import React from "react";
+import logo from "../assets/logo.png";
+import profile from "../assets/John Michael Lagrana.png";
 
 const Proceed = () => {
   return (
     <div className="bg-white">
-      <div className="line" style={{ borderTop: '1px solid black', margin: '10px 0' }}></div>
-      <img src={logo} alt="Logo" className="logo" style={{ maxWidth: '200px' }} />
-      <div className="line" style={{ borderTop: '1px solid black', margin: '10px 0' }}></div>
+      <div className="flex items-center justify-between">
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-50 w-50 object-contain mt-3 ml-6"
+        />
+        <img
+          src={profile}
+          alt="Profile"
+          className="h-10 w-50 mt-5 mr-10 rounded-full border border-black"
+        />
+      </div>
+
+      <hr className="border-3 border-black my-3 mx-15" />
     </div>
   );
 };
