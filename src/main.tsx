@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Michael from "./pages/michael/introduction";
 import Josephine from "./pages/josephine/index";
+import Minigame from "./pages/mini-game/index";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/josephine",
     element: <Josephine />,
+  },
+  {
+    path: "/minigame",
+    element: <Minigame />,
   },
 ]);
 
