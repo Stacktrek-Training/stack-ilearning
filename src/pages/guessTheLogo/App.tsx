@@ -34,11 +34,31 @@ function App(): JSX.Element {
   const [score, setScore] = useState<number>(0);
   const [guesses, setGuesses] = useState<number[]>([]);
   const [isGameOver, setIsGameOver] = useState<boolean>(false);
+  const [timeLeft, setTimeLeft] = useState<number>(60);
 
   useEffect(() => {
-    // Randomize the order of logos
-    logos.sort(() => Math.random() - 0.5);
+    // Create a copy of the logos array and shuffle it
+    const shuffledLogos = [...logos].sort(() => Math.random() - 0.5);
+
+    // Set the currentLogo to be the first logo in the shuffled array
+    setCurrentLogo(shuffledLogos[0]);
+
+    // Set up the timer to update the time left every second
+    const timer = setInterval(() => {
+      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+    }, 1000);
+
+    // Clean up the interval when the component unmounts or timeLeft reaches 0
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
+
+  useEffect(() => {
+    if (timeLeft === 0) {
+      setIsGameOver(true);
+    }
+  }, [timeLeft]);
 
   const handleGuessChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -58,6 +78,7 @@ function App(): JSX.Element {
         title: "Congratulations!",
         text: "You guessed the logo correctly!",
       });
+
       // Add current logo ID to guesses and move on to the next logo
       const nextLogoIndex =
         logos.findIndex((logo) => logo.id === currentLogo.id) + 1;
