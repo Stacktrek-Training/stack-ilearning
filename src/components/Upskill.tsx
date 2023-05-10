@@ -94,8 +94,8 @@ const Proceed = () => {
           </div>
         </div>
 
-         {/*Concept 6*/}
-         <div className="space-y-20 space-x-2 pt-0 ml-20">
+        {/*Concept 6*/}
+        <div className="space-y-20 space-x-2 pt-0 ml-20">
           <div
             className="text-white text-2xl font-serif font-bold ml-[580px] absolute top-[400px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
