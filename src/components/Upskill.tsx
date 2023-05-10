@@ -37,7 +37,7 @@ const Proceed = () => {
         {/*Concept 2*/}
         <div className="space-y-20 space-x-2 pt-0 ml-20">
           <div
-            className="text-white text-2xl font-serif font-bold ml-[105px] absolute top-[120px] 
+            className="text-white text-2xl font-serif font-bold ml-[100px] absolute top-[120px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
     bg-gradient-to-t from-[#FFA500] via-orange-200 to-blue-400"
           >
