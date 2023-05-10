@@ -4,8 +4,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Michael from "./pages/michael/introduction";
-import Josephine from "./pages/josephine/index";
-import Minigame from "./pages/mini-game/index";
+import LinuxCommand from "./pages/linux-command/index";
+import GuessTheLogo from "./pages/guessTheLogo/index";
 
 const router = createBrowserRouter([
   {
@@ -18,11 +18,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/games/linux-command",
-    element: <Josephine />,
+    element: <LinuxCommand />,
   },
   {
     path: "/games/guess-the-logo",
-    element: <Minigame />,
+    element: <GuessTheLogo />,
   },
 ]);
 
