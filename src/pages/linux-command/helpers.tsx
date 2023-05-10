@@ -1,5 +1,3 @@
-import Question from "./components/Questions";
-
 interface Question {
   correctAnswer: string;
   incorrectAnswers: string[];
