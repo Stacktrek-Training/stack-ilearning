@@ -4,7 +4,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Michael from "./pages/michael/introduction";
-import Proceed from "./components/Proceed";
+import Proceed from "./components/Upskill";
 
 const router = createBrowserRouter([
   {
