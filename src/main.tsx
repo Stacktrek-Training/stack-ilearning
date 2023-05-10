@@ -7,6 +7,7 @@ import Michael from "./pages/michael/introduction";
 import Proceed from "./components/Upskill";
 import LinuxCommand from "./pages/linux-command/index";
 import GuessTheLogo from "./pages/guessTheLogo/index";
+import Navbar from "./pages/april/components/Navbar";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
   {
     path: "/Proceed",
     element: <Proceed />,
+  },
+
+  {
+    path: "/Navbar",
+    element: <Navbar />,
   },
 
   {
