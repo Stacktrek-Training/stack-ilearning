@@ -43,22 +43,22 @@ function App(): JSX.Element {
     // Set the currentLogo to be the first logo in the shuffled array
     setCurrentLogo(shuffledLogos[0]);
 
-    // Set up the timer to update the time left every second
+    // Start the timer
+
     const timer = setInterval(() => {
-      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+      setTimeLeft((prevTime) => {
+        const newTime = prevTime - 1;
+        if (newTime === 0) {
+          setIsGameOver(true);
+          clearInterval(timer);
+        }
+        return newTime;
+      });
     }, 1000);
 
-    // Clean up the interval when the component unmounts or timeLeft reaches 0
-    return () => {
-      clearInterval(timer);
-    };
+    // Clear the timer when the component unmounts
+    return () => clearInterval(timer);
   }, []);
-
-  useEffect(() => {
-    if (timeLeft === 0) {
-      setIsGameOver(true);
-    }
-  }, [timeLeft]);
 
   const handleGuessChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -68,6 +68,9 @@ function App(): JSX.Element {
 
   const handleGuessSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
+
+    // clear the text box
+    setPlayerGuess("");
 
     // Check if player's guess matches the current logo's name
     if (playerGuess.toLowerCase() === currentLogo.name.toLowerCase()) {
@@ -90,73 +93,96 @@ function App(): JSX.Element {
         if (guesses.length === logos.length - 1) {
           setIsGameOver(true);
         } else {
-          // Reset guesses and shuffle logos
-          setGuesses([]);
-          logos.sort(() => Math.random() - 0.5);
-          setCurrentLogo(logos[0]);
+          // Reset player's guess and move on to the next logo
+          setPlayerGuess("");
+          const shuffledLogos = [...logos]
+            .filter((logo) => !guesses.includes(logo.id))
+            .sort(() => Math.random() - 0.5);
+          setCurrentLogo(shuffledLogos[0]);
         }
       }
     } else {
-      // Show error message and prompt user to try again
+      // Show error message if player's guess is incorrect
       Swal.fire({
         icon: "error",
-        title: "Oops!",
-        text: "Your guess is incorrect. Please try again.",
+        title: "Oops...",
+        text: "Your guess is incorrect. Please try again!",
       });
     }
-
-    // Clear the input field
-    setPlayerGuess("");
   };
 
-  const renderGameOver = (): JSX.Element => {
-    return (
-      <div className="game-over">
-        <h2>Congratulations!</h2>
-        <p>Your final score is: {score}</p>
-        <button
-          onClick={resetGame}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Play Again
-        </button>
-      </div>
-    );
-  };
-
-  const resetGame = (): void => {
-    setIsGameOver(false);
-    setScore(0);
+  const handlePlayAgainClick = (): void => {
+    // Reset game state
     setCurrentLogo(logos[0]);
-    logos.sort(() => Math.random() - 0.5);
+    setPlayerGuess("");
+    setScore(0);
+    setGuesses([]);
+    setIsGameOver(false);
+    setTimeLeft(60);
   };
-
   return (
-    <div className="app">
-      {isGameOver ? (
-        renderGameOver()
-      ) : (
-        <>
-          <h1 className="text-4xl font-bold mb-8">Guess the Logo</h1>
-          <img src={currentLogo.image} alt="Logo" className="logo-img" />
-          <form onSubmit={handleGuessSubmit}>
-            <input
-              type="text"
-              placeholder="Enter your guess"
-              value={playerGuess}
-              onChange={handleGuessChange}
-              className="border-2 border-gray-400 rounded-md py-2 px-4 mb-4"
+    <div className="bg-gray-100">
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-white rounded-lg shadow-lg p-4 mt-8">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold">Guess The Logo</h1>
+            <img
+              src={currentLogo.image}
+              alt={currentLogo.name}
+              className="mx-auto my-6 max-w-50 h-50"
             />
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-orange-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-300"
-            >
-              Submit
-            </button>
+          </div>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center">
+              <div className="text-lg font-bold mr-2">{timeLeft}</div>
+              <div className="text-gray-600">Seconds Left</div>
+            </div>
+            <div className="flex items-center">
+              <div className="text-gray-600">Score</div>
+              <div className="text-lg font-bold ml-2">{score}</div>
+            </div>
+            <div className="flex items-center">
+              <div className="text-gray-600">Guesses remaining:</div>
+              <div className="text-lg font-bold ml-2">
+                {logos.length - guesses.length}
+              </div>
+            </div>
+          </div>
+          <form onSubmit={handleGuessSubmit}>
+            <div className="flex items-center mb-4">
+              <input
+                type="text"
+                placeholder="Enter your guess"
+                value={playerGuess}
+                onChange={handleGuessChange}
+                disabled={isGameOver}
+                className="border-2 border-gray-400 rounded-lg px-4 py-2 flex-grow mr-2"
+              />
+              <button
+                type="submit"
+                disabled={isGameOver}
+                className="bg-blue-500 text-white rounded-lg px-4 py-2 hover:bg-blue-600 transition-colors duration-300"
+              >
+                Guess
+              </button>
+            </div>
           </form>
-          <p className="score">Your current score is: {score}</p>
-        </>
-      )}
+          {isGameOver && (
+            <div className="bg-white rounded-lg shadow-lg p-4 text-center">
+              <div className="text-lg font-bold mb-2">Time's Up!</div>
+              <div className="text-gray-600 mb-4">
+                You scored {score} points.
+              </div>
+              <button
+                className="bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-orange-600 transition-colors duration-300"
+                onClick={handlePlayAgainClick}
+              >
+                Play Again
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
