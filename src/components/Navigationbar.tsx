@@ -5,10 +5,10 @@ import userprofilephoto from "../assets/John Michael Lagrana.png";
 const navbar = () => {
   return (
     <header>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900 h-12">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
           <a href="https://flowbite.com/" className="flex items-center">
-            <img src={logo} className="h-8 mr-3" alt="StackTrek Logo" />
+            <img src={logo} className="h-10 ml-2" alt="StackTrek Logo" />
           </a>
           <div
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"

@@ -4,8 +4,10 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
 import Michael from "./pages/michael/introduction";
+import Proceed from "./components/Upskill";
 import LinuxCommand from "./pages/linux-command/index";
 import GuessTheLogo from "./pages/guessTheLogo/index";
+import Navbar from "./pages/april/components/Navbar";
 
 const router = createBrowserRouter([
   {
@@ -16,14 +18,27 @@ const router = createBrowserRouter([
     path: "/Michael",
     element: <Michael />,
   },
+
   {
-    path: "/games/linux-command",
-    element: <LinuxCommand />,
+    path: "/Proceed",
+    element: <Proceed />,
   },
+
+  {
+    path: "/Navbar",
+    element: <Navbar />,
+  },
+
+  {
+    path: "/games/linux-commands",
+    element: <LinuxCommand/>,
+  },
+
   {
     path: "/games/guess-the-logo",
     element: <GuessTheLogo />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
