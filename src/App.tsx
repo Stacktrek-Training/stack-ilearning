@@ -5,8 +5,7 @@ import Choosepage from "./components/Choosepage";
 function App() {
   return (
     <div>
-      <Navigationbar />
-      <Choosepage />
+      
     </div>
   );
 }
