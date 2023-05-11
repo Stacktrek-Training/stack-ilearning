@@ -28,6 +28,8 @@ const logos: Logo[] = [
   { id: 7, image: pythonLogo, name: "Python" },
 ];
 
+let timer: NodeJS.Timer;
+
 function App(): JSX.Element {
   const [currentLogo, setCurrentLogo] = useState<Logo>(logos[0]);
   const [playerGuess, setPlayerGuess] = useState<string>("");
@@ -44,8 +46,13 @@ function App(): JSX.Element {
     setCurrentLogo(shuffledLogos[0]);
 
     // Start the timer
+    startTimer();
 
-    const timer = setInterval(() => {
+    // Clear the timer when the component unmounts
+    return () => clearInterval(timer);
+  }, []);
+  function startTimer() {
+    timer = setInterval(() => {
       setTimeLeft((prevTime) => {
         const newTime = prevTime - 1;
         if (newTime === 0) {
@@ -55,10 +62,7 @@ function App(): JSX.Element {
         return newTime;
       });
     }, 1000);
-
-    // Clear the timer when the component unmounts
-    return () => clearInterval(timer);
-  }, []);
+  }
 
   const handleGuessChange = (
     event: React.ChangeEvent<HTMLInputElement>
@@ -119,7 +123,9 @@ function App(): JSX.Element {
     setGuesses([]);
     setIsGameOver(false);
     setTimeLeft(60);
+    startTimer();
   };
+
   return (
     <div className="bg-gray-100">
       <div className="max-w-2xl mx-auto">
