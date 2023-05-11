@@ -8,6 +8,7 @@ import Proceed from "./components/Upskill";
 import LinuxCommand from "./pages/linux-command/index";
 import GuessTheLogo from "./pages/guessTheLogo/index";
 import Navbar from "./pages/april/components/Navbar";
+import SQL from "./components/SQL";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
 
   {
     path: "/games/linux-commands",
-    element: <LinuxCommand/>,
+    element: <LinuxCommand />,
   },
 
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
     element: <GuessTheLogo />,
   },
 
+  {
+    path: "/SQL",
+    element: <SQL />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
