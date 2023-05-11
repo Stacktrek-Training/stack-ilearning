@@ -28,7 +28,7 @@ const Proceed = () => {
          bg-gradient-to-t from-[black] to-gray-400"
         >
           <h1 className="text-center mt-5 flex justify-center items-center h-full">
-            <a href="/sql" className="text-white">
+            <a href="/SQL" className="text-white mt-[-40px]">
               SQL
             </a>
           </h1>
@@ -42,8 +42,8 @@ const Proceed = () => {
     bg-gradient-to-t from-[black] to-gray-400"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
-              <a href="/sql" className="text-white">
-                SQL
+              <a href="/Concept 2" className="text-white mt-[-40px]">
+                Concept 2
               </a>
             </h1>
           </div>
@@ -57,8 +57,8 @@ const Proceed = () => {
     bg-gradient-to-t from-[black] to-gray-400"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
-              <a href="/sql" className="text-white">
-                SQL
+              <a href="/Concept 3" className="text-white mt-[-40px]">
+                Concept 3
               </a>
             </h1>
           </div>
@@ -72,8 +72,8 @@ const Proceed = () => {
     bg-gradient-to-t from-[black] to-gray-400"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
-              <a href="/sql" className="text-white">
-                SQL
+              <a href="/Concept 4" className="text-white mt-[-40px]">
+                Concept 4
               </a>
             </h1>
           </div>
@@ -87,8 +87,8 @@ const Proceed = () => {
     bg-gradient-to-t from-[black] to-gray-400"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
-              <a href="/sql" className="text-white">
-                SQL
+              <a href="/Concept 5" className="text-white mt-[-40px]">
+                Concept 5
               </a>
             </h1>
           </div>
@@ -102,8 +102,8 @@ const Proceed = () => {
     bg-gradient-to-t from-[black] to-gray-400"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
-              <a href="/sql" className="text-white">
-                SQL
+              <a href="/Concept 6" className="text-white mt-[-40px]">
+                Concept 6
               </a>
             </h1>
           </div>
