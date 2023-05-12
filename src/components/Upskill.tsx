@@ -25,7 +25,7 @@ const Proceed = () => {
         <div
           className="text-white text-2xl font-serif font-bold ml-[120px] mt-[-50px] 
         inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px]
-         bg-gradient-to-t from-[black] to-gray-400"
+         bg-gradient-to-t from-[black] to-gray-800"
         >
           <h1 className="text-center mt-5 flex justify-center items-center h-full">
             <a href="/SQL" className="text-white mt-[-40px]">
@@ -39,7 +39,7 @@ const Proceed = () => {
           <div
             className="text-white text-2xl font-serif font-bold ml-[185px] absolute top-[153px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
-    bg-gradient-to-t from-[black] to-gray-400"
+    bg-gradient-to-t from-[black] to-gray-800"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
               <a href="/Concept 2" className="text-white mt-[-40px]">
@@ -54,7 +54,7 @@ const Proceed = () => {
           <div
             className="text-white text-2xl font-serif font-bold ml-[580px] absolute top-[153px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
-    bg-gradient-to-t from-[black] to-gray-400"
+    bg-gradient-to-t from-[black] to-gray-800"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
               <a href="/Concept 3" className="text-white mt-[-40px]">
@@ -69,7 +69,7 @@ const Proceed = () => {
           <div
             className="text-white text-2xl font-serif font-bold ml-[185px] absolute top-[400px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
-    bg-gradient-to-t from-[black] to-gray-400"
+    bg-gradient-to-t from-[black] to-gray-800"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
               <a href="/Concept 4" className="text-white mt-[-40px]">
@@ -84,7 +84,7 @@ const Proceed = () => {
           <div
             className="text-white text-2xl font-serif font-bold ml-[-205px] absolute top-[400px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
-    bg-gradient-to-t from-[black] to-gray-400"
+    bg-gradient-to-t from-[black] to-gray-800"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
               <a href="/Concept 5" className="text-white mt-[-40px]">
@@ -99,7 +99,7 @@ const Proceed = () => {
           <div
             className="text-white text-2xl font-serif font-bold ml-[580px] absolute top-[400px] 
     left-[400px] inline-block rounded-3xl shadow-lg shadow-bottom w-[340px] h-[200px] 
-    bg-gradient-to-t from-[black] to-gray-400"
+    bg-gradient-to-t from-[black] to-gray-800"
           >
             <h1 className="text-center mt-5 flex justify-center items-center h-full">
               <a href="/Concept 6" className="text-white mt-[-40px]">
