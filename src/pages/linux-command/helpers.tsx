@@ -1,4 +1,7 @@
-import { Question } from "./contexts/quiz";
+interface Question {
+  correctAnswer: string;
+  incorrectAnswers: string[];
+}
 
 interface ShuffledAnswer {
   sort: number;

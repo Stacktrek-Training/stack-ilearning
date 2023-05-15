@@ -11,14 +11,60 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
   },
+
   {
-    path: "/Michael",
-    element: <Michael />,
+    path: "/Proceed",
+    element: <Proceed />,
+  },
+
+  {
+    path: "/Navbar",
+    element: <Navbar />,
+  },
+
+  {
+    path: "/games/linux-commands",
+    element: <LinuxCommand />,
+  },
+
+  {
+    path: "/games/guess-the-logo",
+    element: <GuessTheLogo />,
+  },
+
+  {
+    path: "/SQL",
+    element: <SQL />,
+  },
+
+  {
+    path: "/Proceed",
+    element: <Proceed />,
+  },
+
+  {
+    path: "/Navbar",
+    element: <Navbar />,
+  },
+
+  {
+    path: "/games/linux-commands",
+    element: <LinuxCommand />,
+  },
+
+  {
+    path: "/games/guess-the-logo",
+    element: <GuessTheLogo />,
+  },
+
+  {
+    path: "/SQL",
+    element: <SQL />,
   },
   {
     path: "/Mini-Game/MultipleChoice",
     element: <MichaelMP />,
-  },   
+  },
   {
     path: "/Josephine",
     element: <Josephine />,
