@@ -135,7 +135,9 @@ function App() {
             {score} out of {questions.length} question - (
             {(score / questions.length) * 100}%)
           </h2>
-          <button className="btnrestart" onClick={() => restartGame()}>Retake Quiz!</button>
+          <button className="btnrestart" onClick={() => restartGame()}>
+            Retake Quiz!
+          </button>
         </div>
       ) : (
         /* 5. Question Card  */

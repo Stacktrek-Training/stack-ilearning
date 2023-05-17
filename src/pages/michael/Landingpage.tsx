@@ -69,7 +69,7 @@ const Landingpage = () => {
         </p>
         <div className="pb-8 ">
           <center>
-          <Link to="/Mini-Game/MultipleChoice">
+            <Link to="/games/CsharpQuiz1">
               <button
                 type="button"
                 className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4
