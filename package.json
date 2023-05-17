@@ -12,6 +12,7 @@
     "prettier:check": "prettier --check src/**/*"
   },
   "dependencies": {
+    "@types/node": "^20.1.2",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",
     "prismjs": "^1.29.0",
