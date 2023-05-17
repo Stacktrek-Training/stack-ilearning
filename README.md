@@ -28,6 +28,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://vitejs.dev/guide/static-deploy.html) for more information.
 
+### `npm run lint`
+
+Executes ESLint which does statically analyzes code to find problems.
+
 ## Learn More
 
 You can learn more in the [Vite](https://vitejs.dev/guide/).
