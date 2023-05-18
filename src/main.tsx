@@ -3,12 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/root";
-<<<<<<< HEAD
-import Michael from "./pages/michael/introduction";
-import Josephine from "./pages/josephine/components/Quiz";
-import MichaelMP from "./pages/michael/Multiplechoice";
-
-=======
 import Proceed from "./components/Upskill";
 import LinuxCommand from "./pages/linux-command/index";
 import GuessTheLogo from "./pages/guessTheLogo/index";
@@ -16,12 +10,16 @@ import Navbar from "./pages/april/components/Navbar";
 import SQL from "./components/SQL";
 import Landingpage from "./pages/michael/Landingpage";
 import CsharpQuiz1 from "./pages/michael/mini-game/Quiz1";
->>>>>>> main
+import AuthenticationPage from "./pages/authentication/Loginpage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+  },
+  {
+    path: "/LoginPage",
+    element: <AuthenticationPage />,
   },
   {
     path: "/Proceed",
@@ -53,14 +51,6 @@ const router = createBrowserRouter([
   {
     path: "/games/CsharpQuiz1",
     element: <CsharpQuiz1 />,
-  },
-  {
-    path: "/MichaelMP",
-    element: <MichaelMP />,
-  },
-  {
-    path: "/Josephine",
-    element: <Josephine />,
   },
 ]);
 
