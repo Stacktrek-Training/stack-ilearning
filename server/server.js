@@ -8,20 +8,20 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/addUser", (req, res) => {
-  const firstName = req.body["firstName"];
-  const lastName = req.body["lastName"];
-  const email = req.body["email"];
-  const age = req.body["age"];
-  const userType = req.body["userType"];
+  const username = req.body["USERNAME"];
+  const email = req.body["EMAIL"];
+  const password = req.body["PASSWORD"];
+  //const firstName = req.body["FIRST_NAME"];
+  //const lastName = req.body["LAST_NAME"];
 
-  console.log("First Name: " + firstName);
-  console.log("Last Name: " + lastName);
+  console.log("Username: " + username);
+  console.log("Password: " + password);
   console.log("Email: " + email);
-  console.log("Age: " + age);
-  console.log("User Type: " + userType);
+  //console.log("First Name: " + firstName);
+  //console.log("Last Name: " + lastName);
 
-  const insertSTMT = `INSERT INTO Users (FIRST_NAME, LAST_NAME, EMAIL, AGE, USER_TYPE, CREATED_AT, UPDATED_WHEN)
-    VALUES ('${firstName}', '${lastName}', '${email}', ${age}, '${userType}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);`;
+  const insertSTMT = `INSERT INTO Users (USERNAME, EMAIL, PASSWORD, CREATED_AT, UPDATED_WHEN)
+    VALUES ('${username}', '${email}', '${password}', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);`;
 
   pool
     .query(insertSTMT)
@@ -87,6 +87,24 @@ app.post("/addLesson", (req, res) => {
 
   console.log(req.body);
   res.send("Response Received: " + JSON.stringify(req.body));
+});
+
+app.delete("/deleteUser/:username", (req, res) => {
+  const username = req.params.username;
+
+  const deleteSTMT = `DELETE FROM Users WHERE USERNAME = '${username}'`;
+
+  pool
+    .query(deleteSTMT)
+    .then((response) => {
+      console.log("User deleted");
+      console.log(response);
+      res.send("User deleted");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).send("Error deleting user");
+    });
 });
 
 app.listen(4000, () => console.log("Server on localhost:4000"));

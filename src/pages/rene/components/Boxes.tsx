@@ -12,7 +12,7 @@ export const Boxes = () => {
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
     setSelectedDiv({
       className: (e.target as HTMLDivElement).className,
-      textContent: (e.target as HTMLDivElement).textContent || '',
+      textContent: (e.target as HTMLDivElement).textContent || "",
     });
   };
 

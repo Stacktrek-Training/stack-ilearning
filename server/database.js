@@ -1,30 +1,13 @@
 const { Pool } = require("pg");
 
+const connectionString =
+  "postgres://ilearning_db_user:9vaZGNodqZYTz70U4EgkFb2JRHF2AiU0@dpg-chi9sg64dadc9vmps4cg-a.singapore-postgres.render.com/ilearning_db";
+
 const pool = new Pool({
-  user: "postgres",
-  password: "postgres",
-  host: "localhost",
-  port: 5432,
-  database: "ilearning",
+  connectionString: connectionString,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
-
-/* const createTblQry = `CREATE TABLE Course (
-  COURSE_ID SERIAL PRIMARY KEY,
-  COURSE_NAME VARCHAR(255),
-  COURSE_DESCRIPTION VARCHAR(255),
-  isCompleted BOOLEAN
-);`;
-
-pool
-  .query(createTblQry)
-  .then((Response) => {
-    console.log("Table Created");
-    console.log(response);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-  */
 
 module.exports = pool;
