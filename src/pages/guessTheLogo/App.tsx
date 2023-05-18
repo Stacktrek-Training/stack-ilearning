@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 
@@ -80,11 +79,6 @@ function App(): JSX.Element {
     if (playerGuess.toLowerCase() === currentLogo.name.toLowerCase()) {
       // Increase score by 1 and show congratulatory message
       setScore(score + 1);
-      Swal.fire({
-        icon: "success",
-        title: "Congratulations!",
-        text: "You guessed the logo correctly!",
-      });
 
       // Add current logo ID to guesses and move on to the next logo
       const nextLogoIndex =
@@ -108,9 +102,12 @@ function App(): JSX.Element {
     } else {
       // Show error message if player's guess is incorrect
       Swal.fire({
+        position: "center",
         icon: "error",
         title: "Oops...",
         text: "Your guess is incorrect. Please try again!",
+        showConfirmButton: false,
+        timer: 1000,
       });
     }
   };
@@ -128,14 +125,14 @@ function App(): JSX.Element {
 
   return (
     <div className="bg-gray-100">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-lg mx-auto">
         <div className="bg-white rounded-lg shadow-lg p-4 mt-8">
           <div className="text-center">
             <h1 className="text-2xl font-bold">Guess The Logo</h1>
             <img
               src={currentLogo.image}
               alt={currentLogo.name}
-              className="mx-auto my-6 max-w-50 h-50"
+              className="mx-auto my-6 max-w-40 h-40"
             />
           </div>
           <div className="flex items-center justify-between mb-4">
