@@ -10,11 +10,16 @@ import Navbar from "./pages/april/components/Navbar";
 import SQL from "./components/SQL";
 import Landingpage from "./pages/michael/Landingpage";
 import CsharpQuiz1 from "./pages/michael/mini-game/Quiz1";
+import AuthenticationPage from "./pages/authentication/Loginpage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+  },
+  {
+    path: "/LoginPage",
+    element: <AuthenticationPage />,
   },
   {
     path: "/Proceed",
