@@ -33,7 +33,7 @@ const SQL: React.FC = () => {
           break;
       }
       return (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 mt-[-20]">
           <div className="bg-white text-black p-10 rounded-lg shadow-md max-w-screen-lg w-11/12">
             <textarea
               className="h-40 w-full resize-none overflow-auto"
