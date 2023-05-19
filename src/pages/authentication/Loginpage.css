@@ -86,3 +86,10 @@ input[type="text"],
   color: rgb(0, 0, 255);
   text-decoration: underline;
 }
+
+.stackTrekLogo {
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 70px;
+}

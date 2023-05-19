@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
 import Swal from "sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
+import "./App.css";
 
 // Import logo images
 import appleLogo from "./assets/apple.jpg";

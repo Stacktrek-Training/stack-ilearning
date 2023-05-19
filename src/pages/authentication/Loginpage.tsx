@@ -5,12 +5,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import "./Loginpage.css";
 import { Link } from "react-router-dom";
+import stackTrekLogo from "./logo/stacktrek-logo.png";
 
 const Loginpage = () => {
   return (
     <div>
       <div className="boxLogin">
-        <div></div>
+        <div>
+          <img
+            src={stackTrekLogo}
+            alt="StackTrek Logo"
+            className="stackTrekLogo"
+          />
+        </div>
 
         <div>
           <center>
