@@ -9,13 +9,10 @@ interface EditorProps {
 }
 
 export const Editor = ({ selectedDiv = {}, onUpdate }: EditorProps) => {
-  const newClassName = selectedDiv?.className || "";
-  const newTextContent = selectedDiv?.textContent || "";
-
   const handleApply = () => {
     onUpdate({
-      className: newClassName,
-      textContent: newTextContent,
+      className: selectedDiv?.className || "",
+      textContent: selectedDiv?.textContent || "",
     });
   };
 
@@ -31,30 +28,6 @@ export const Editor = ({ selectedDiv = {}, onUpdate }: EditorProps) => {
       )}
 
       <div className="absolute bottom-5 left-0 w-full flex justify-center">
-        <input
-          type="text"
-          className="border rounded w-32 px-2 py-1 mr-2"
-          placeholder="Class name"
-          value={newClassName}
-          onChange={(e) => {
-            onUpdate({
-              className: e.target.value,
-              textContent: newTextContent,
-            });
-          }}
-        />
-        <input
-          type="text"
-          className="border rounded w-32 px-2 py-1"
-          placeholder="Text content"
-          value={newTextContent}
-          onChange={(e) => {
-            onUpdate({
-              className: newClassName,
-              textContent: e.target.value,
-            });
-          }}
-        />
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           onClick={handleApply}

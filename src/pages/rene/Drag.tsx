@@ -1,6 +1,5 @@
 import Stage from "./components/Stage";
 import Maindisplay from "./components/Maindisplay";
-import "./App.css";
 
 function App() {
   return (
