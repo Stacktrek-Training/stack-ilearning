@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+
+.matching-card-body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    min-height: 100vh;
+    border: 10px solid white;
+    background-color: white;
+}
+
+
+#main {
+    display: flex;
+    flex: 1;
+}
+
+#main > .matching-card-cards {
+    flex: 1;
+    background: rgb(106, 64, 117);
+    padding: 0em; /* reduce padding */
+}
+
+#main > .matching-card-input {
+    flex: 0 0 20%;
+    background: #d0c1a6;
+    order: 2;
+    padding: 1.5em; /* reduce padding */
+}
+
+.matching-card-header{
+    background: #ffffff;
+    height: 4vh;
+    text-align: center;
+    padding: 0.1em;
+}
+
+.matching-card-cards, .matching-card-input{
+    padding: 1em;
+}
+
+
+#main .matching-card-cards .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.NewGame {
+    border: 2px solid #d682e1;
+    transition-duration: 0.4s;
+}
+
+.NewGame:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+  
