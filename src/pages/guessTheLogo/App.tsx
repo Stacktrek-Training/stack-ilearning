@@ -10,23 +10,105 @@ import amazonLogo from "./assets/amazon.png";
 import javaLogo from "./assets/java.png";
 import reactLogo from "./assets/react.jpg";
 import pythonLogo from "./assets/python.png";
+import csharpLogo from "./assets/csharp.png";
+import cplusLogo from "./assets/cplus.png";
+import canvaLogo from "./assets/canva.jpg";
+import cssLogo from "./assets/css.png";
+import figmaLogo from "./assets/figma.jpg";
+import htmlLogo from "./assets/html.png";
+import jsLogo from "./assets/js.png";
+import mysqlLogo from "./assets/mysql1.png";
+import perlLogo from "./assets/perl1.png";
+import postgreLogo from "./assets/postgresql.jpg";
+import photoshopLogo from "./assets/photoshop.png";
+import rubyLogo from "./assets/ruby1.png";
+import typescriptLogo from "./assets/typescript.png";
+import visualLogo from "./assets/visual basic.png";
+import vscodeLogo from "./assets/vscode.jpg";
+import xamppLogo from "./assets/xampp.png";
 
 interface Logo {
   id: number;
   image: string;
   name: string;
+  correctAnswers: string[];
 }
 
 const logos: Logo[] = [
-  { id: 1, image: appleLogo, name: "Apple" },
-  { id: 2, image: nodeLogo, name: "Nodejs" },
-  { id: 3, image: microsoftLogo, name: "Microsoft" },
-  { id: 4, image: amazonLogo, name: "Amazon" },
-  { id: 5, image: javaLogo, name: "Java" },
-  { id: 6, image: reactLogo, name: "Reactjs" },
-  { id: 7, image: pythonLogo, name: "Python" },
+  { id: 1, image: appleLogo, name: "Apple", correctAnswers: ["apple"] },
+  {
+    id: 2,
+    image: nodeLogo,
+    name: "Nodejs",
+    correctAnswers: ["Node.js", "Nodejs", "node"],
+  },
+  {
+    id: 3,
+    image: microsoftLogo,
+    name: "Microsoft",
+    correctAnswers: ["microsoft", "microsoft office"],
+  },
+  { id: 4, image: amazonLogo, name: "Amazon", correctAnswers: ["amazon"] },
+  { id: 5, image: javaLogo, name: "Java", correctAnswers: ["java"] },
+  {
+    id: 6,
+    image: reactLogo,
+    name: "Reactjs",
+    correctAnswers: ["Reactjs", "react.js", "react"],
+  },
+  { id: 7, image: pythonLogo, name: "Python", correctAnswers: ["python"] },
+  { id: 8, image: csharpLogo, name: "C#", correctAnswers: ["C#", "CSharp"] },
+  {
+    id: 9,
+    image: cplusLogo,
+    name: "C++",
+    correctAnswers: ["C++", "CPlusPlus"],
+  },
+  { id: 10, image: canvaLogo, name: "canva", correctAnswers: ["canva"] },
+  { id: 11, image: cssLogo, name: "CSS", correctAnswers: ["CSS"] },
+  { id: 12, image: figmaLogo, name: "figma", correctAnswers: ["Figma"] },
+  { id: 13, image: htmlLogo, name: "HTML", correctAnswers: ["HTML"] },
+  {
+    id: 14,
+    image: jsLogo,
+    name: "JavaScript",
+    correctAnswers: ["JavaScript", "JS"],
+  },
+  { id: 15, image: mysqlLogo, name: "MySQL", correctAnswers: ["MySQL"] },
+  { id: 16, image: perlLogo, name: "Perl", correctAnswers: ["Perl"] },
+  {
+    id: 17,
+    image: postgreLogo,
+    name: "Postgre",
+    correctAnswers: ["PostgreSQL", "postgre"],
+  },
+  {
+    id: 18,
+    image: photoshopLogo,
+    name: "Photoshop",
+    correctAnswers: ["Photoshop"],
+  },
+  { id: 19, image: rubyLogo, name: "Ruby", correctAnswers: ["Ruby"] },
+  {
+    id: 20,
+    image: typescriptLogo,
+    name: "TypeScript",
+    correctAnswers: ["TypeScript"],
+  },
+  {
+    id: 21,
+    image: visualLogo,
+    name: "Visual Basic",
+    correctAnswers: ["Visual Basic"],
+  },
+  {
+    id: 22,
+    image: vscodeLogo,
+    name: "Visual Studio Code",
+    correctAnswers: ["Visual Studio Code", "VS Code", "vscode"],
+  },
+  { id: 23, image: xamppLogo, name: "XAMPP", correctAnswers: ["XAMPP"] },
 ];
-
 let timer: NodeJS.Timer;
 
 function App(): JSX.Element {
@@ -35,7 +117,7 @@ function App(): JSX.Element {
   const [score, setScore] = useState<number>(0);
   const [guesses, setGuesses] = useState<number[]>([]);
   const [isGameOver, setIsGameOver] = useState<boolean>(false);
-  const [timeLeft, setTimeLeft] = useState<number>(60);
+  const [timeLeft, setTimeLeft] = useState<number>(120);
 
   useEffect(() => {
     // Create a copy of the logos array and shuffle it
@@ -119,7 +201,7 @@ function App(): JSX.Element {
     setScore(0);
     setGuesses([]);
     setIsGameOver(false);
-    setTimeLeft(60);
+    setTimeLeft(120);
     startTimer();
   };
 
