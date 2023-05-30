@@ -1301,6 +1301,11 @@
   resolved "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
 
+"@types/prismjs@^1.26.0":
+  version "1.26.0"
+  resolved "https://registry.npmjs.org/@types/prismjs/-/prismjs-1.26.0.tgz"
+  integrity sha512-ZTaqn/qSqUuAq1YwvOFQfVW1AR/oQJlLSZVustdjwI+GZ8kr0MSHBj0tsXPW1EqHubx50gtBEjbPGsdZwQwCjQ==
+
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
@@ -1753,6 +1758,11 @@ classnames@^2.2.6, classnames@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz"
   integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
+
+clsx@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
+  integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -3275,6 +3285,11 @@ prettier@2.8.7:
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.7.tgz"
   integrity sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==
 
+prismjs@^1.29.0:
+  version "1.29.0"
+  resolved "https://registry.npmjs.org/prismjs/-/prismjs-1.29.0.tgz"
+  integrity sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==
+
 prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
@@ -3294,13 +3309,21 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-"react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", react-dom@^18, react-dom@^18.2.0, react-dom@>=16.8, react-dom@>=16.8.0:
+"react-dom@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", react-dom@^18, react-dom@^18.2.0, "react-dom@>= 16.3.0", react-dom@>=16.8, react-dom@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-draggable@^4.4.5:
+  version "4.4.5"
+  resolved "https://registry.npmjs.org/react-draggable/-/react-draggable-4.4.5.tgz"
+  integrity sha512-OMHzJdyJbYTZo4uQE393fHcqqPYsEtkjfMgvCHr6rejT+Ezn4OZbNyGH50vv+SunC1RMvwOTSWkEODQLzw1M9g==
+  dependencies:
+    clsx "^1.1.1"
+    prop-types "^15.8.1"
 
 react-icons@^4.7.1:
   version "4.8.0"
@@ -3341,7 +3364,7 @@ react-router@6.11.1:
   dependencies:
     "@remix-run/router" "1.6.1"
 
-react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", react@^18, react@^18.2.0, react@>=16.3, react@>=16.8, react@>=16.8.0:
+react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", react@^18, react@^18.2.0, "react@>= 16.3.0", react@>=16.3, react@>=16.8, react@>=16.8.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -3631,10 +3654,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-sweetalert2@^11.7.5:
-  version "11.7.5"
-  resolved "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.7.5.tgz"
-  integrity sha512-RBPKdK8Uf9/bz9r4vy7x6sGqf0MioSXt1po1lAwwcl3AwbjHVTc5S0yud4ZJKU1EhvJFVDrFoqIpHwWERwZJEA==
+sweetalert2@^11.4.8:
+  version "11.4.8"
+  resolved "https://registry.npmjs.org/sweetalert2/-/sweetalert2-11.4.8.tgz"
+  integrity sha512-BDS/+E8RwaekGSxCPUbPnsRAyQ439gtXkTF/s98vY2l9DaVEOMjGj1FaQSorfGREKsbbxGSP7UXboibL5vgTMA==
 
 tabbable@^6.0.1:
   version "6.1.2"
