@@ -11,6 +11,7 @@ import SQL from "./components/SQL";
 import Landingpage from "./pages/michael/Landingpage";
 import CsharpQuiz1 from "./pages/michael/mini-game/Quiz1";
 import AuthenticationPage from "./pages/authentication/Loginpage";
+import DragGame from "./pages/rene/Drag";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: "/games/CsharpQuiz1",
     element: <CsharpQuiz1 />,
+  },
+  {
+    path: "/games/DragGame",
+    element: <DragGame />,
   },
 ]);
 
