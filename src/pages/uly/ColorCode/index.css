@@ -1,0 +1,95 @@
+.score {
+  font-size: 15px;
+  color: wheat;
+  font-weight: bold;
+  margin-top: 5px;
+  border: 2px solid #FF790D;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  background-color: rgba(255, 121, 13, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1px;
+  background-image: url("../1111.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.greeting {
+  font-size: 24px;
+  font-weight: bold;
+  color: wheat;
+  margin-bottom: 0rem;
+}
+
+.description {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FF790D;
+  margin-bottom: 1rem;
+}
+
+.colorContainer {
+  width: 350px;
+  height: 350px;
+  margin-top: 12px;
+  border-radius: 50%;
+  border: 2px solid wheat;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+
+.btnContainer button {
+  margin: 5px;
+  background-color: #ff7a0dcf;
+  border: 15px;
+  color: rgb(255, 255, 255);
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 3rem;
+  font-family: calibri;
+  border-radius: 24px;
+  box-shadow: rgba(246, 246, 247, 0.25) 0px 30px 60px -12px,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  cursor: pointer;
+}
+
+.btnContainer button:hover {
+  background-color: #ffa600; /* Change to the desired color */
+  color: black;
+  cursor: pointer;
+}
+
+span {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+span.correct {
+  color: green;
+  background-color: rgba(0, 255, 0, 0.1);
+  border: 1px solid green;
+  border-radius: 10px;
+}
+
+span.wrong {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  border-radius: 10px;
+}
