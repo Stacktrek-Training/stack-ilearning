@@ -12,6 +12,8 @@ import Landingpage from "./pages/michael/Landingpage";
 import CsharpQuiz1 from "./pages/michael/mini-game/Quiz1";
 import AuthenticationPage from "./pages/authentication/Loginpage";
 import DragGame from "./pages/rene/Drag";
+import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
+import ColorCodeExercise from "./pages/uly/ColorCode/App";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +58,14 @@ const router = createBrowserRouter([
   {
     path: "/games/DragGame",
     element: <DragGame />,
+  },
+  {
+    path: "/games/APIQuiz",
+    element: <APIQuiz />,
+  },
+  {
+    path: "/games/ColorCodeExercise",
+    element: <ColorCodeExercise />,
   },
 ]);
 
