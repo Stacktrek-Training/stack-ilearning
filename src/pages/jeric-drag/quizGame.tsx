@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./dragQuiz.css";
 import applauseSound from "./assets/applause.mp3";
 import logo from "./assets/stacktrek-logo.png";
@@ -185,11 +185,7 @@ const QuizGame: React.FC = () => {
     return shuffledArray;
   }
 
-  useEffect(() => {
-    shuffleQuestions();
-  }, []);
-
-  const shuffleQuestions = (): void => {
+  const shuffleQuestions = useCallback(() => {
     const shuffledQuestions = [...questions];
     for (let i = shuffledQuestions.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -199,7 +195,12 @@ const QuizGame: React.FC = () => {
       ];
     }
     setQuestions(shuffledQuestions);
-  };
+  }, [questions]);
+
+  useEffect(() => {
+    shuffleQuestions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDragStart = (
     event: React.DragEvent<HTMLLIElement>,
