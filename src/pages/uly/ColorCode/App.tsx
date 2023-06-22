@@ -1,5 +1,5 @@
 import "./index.css";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 
 const GREETING = "Color Code Exercise";
 const DESCRIPTION = "FRESHEN UP! :) this is only a warm up for color codes.";
@@ -42,7 +42,7 @@ function App() {
     return `#${color}`;
   };
 
-  const setButtons = useCallback(() => {
+  function setButtons() {
     const actualColor = getRandomColor();
     setColor(actualColor);
     setAnswers(
@@ -50,11 +50,11 @@ function App() {
         () => Math.random() - 0.5
       )
     );
-  }, []);
+  }
 
   useEffect(() => {
     setButtons();
-  }, [setButtons]);
+  }, []);
 
   function handleClick(answer: string) {
     if (answer === color) {
