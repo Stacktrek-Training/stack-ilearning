@@ -118,7 +118,7 @@ const TypingGame: React.FC = () => {
         <div className="phrase-box">
           <div className="white-box">
             <p
-              className="phrase-text"
+              className="phrase-text no-select"
               dangerouslySetInnerHTML={{
                 __html: phrases[phraseOrder[currentPhraseIndex]],
               }}
