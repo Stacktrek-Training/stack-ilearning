@@ -10,6 +10,7 @@ import Navbar from "./pages/april/components/Navbar";
 import SQL from "./components/SQL";
 import Landingpage from "./pages/michael/Landingpage";
 import CsharpQuiz1 from "./pages/michael/mini-game/Quiz1";
+import TypingGame from "./pages/Typing_Game/TheCoder/App";
 import AuthenticationPage from "./pages/authentication/Loginpage";
 import DragGame from "./pages/rene/Drag";
 import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/games/DragGame",
     element: <DragGame />,
+  },
+  {
+    path: "/games/TypingGame",
+    element: <TypingGame />,
   },
   {
     path: "/games/APIQuiz",
