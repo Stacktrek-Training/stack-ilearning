@@ -1,0 +1,17 @@
+.welcome-message {
+  background-color: #1a202c11;
+  font-weight: bold;
+  padding: 6px;
+  border-radius: 5px;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 14px;
+  /* Add more styles here */
+
+  /* Hover effect */
+  transition: background-color 0.3s;
+}
+
+.welcome-message:hover {
+  background-color: #3d79fc69;
+  /* bg-blue-500 */
+}
