@@ -1,0 +1,126 @@
+.square-container {
+  width: 1000px;
+  /* Adjust the width as desired */
+  height: 450px;
+  /* Adjust the height as desired */
+}
+
+@keyframes starAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.stars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Add margin-bottom for spacing */
+}
+
+.star-animation {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-color: #f44336;
+  border-radius: 50%;
+  /* Add border-radius property to make it a circle */
+  position: relative;
+  animation-name: pop;
+  animation-fill-mode: forwards;
+  transform: translate(-50%, -50%);
+  animation: starAnimation 1s ease-in-out infinite;
+}
+
+@keyframes starAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.x-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* Add margin-bottom for spacing */
+}
+
+.x-animation {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-color: #006400;
+  border-radius: 50%;
+  /* Add border-radius property to make it a circle */
+  position: relative;
+  animation-name: pop;
+  animation-fill-mode: forwards;
+  transform: translate(-50%, -50%);
+  animation: starAnimation 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulsing-text {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation-bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animation-bounce {
+  animation: animation-bounce 1s infinite;
+}
