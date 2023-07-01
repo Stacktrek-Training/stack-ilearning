@@ -59,7 +59,7 @@ const router = createBrowserRouter([
     element: <DragGame />,
   },
   {
-    path: "/games/GuessTheWord/",
+    path: "/games/GuessTheWord",
     element: <GuessGame />,
   },
 ]);

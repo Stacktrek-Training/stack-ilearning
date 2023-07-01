@@ -1,11 +1,8 @@
-import React, { useState, useEffect, ChangeEvent, useRef } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import terms from "./components/Data";
 import Navbar from "./components/Navbar";
 import Login from "./components/Login";
 import "./Guess.css";
-import timerSound from "./assets/timer.mp3";
-import tryagainSound from "./assets/TryAgain.wav";
-import congratsSound from "./assets/Congrats.mp3";
 
 const Guess = (): JSX.Element => {
   const [currentTermIndex, setCurrentTermIndex] = useState(0);
@@ -16,9 +13,6 @@ const Guess = (): JSX.Element => {
   const [timers, setTimers] = useState(terms.map(() => 20));
   const [tryAgain, setTryAgain] = useState(false);
   const [username, setUsername] = useState("");
-  const timerSoundElement = useRef<HTMLAudioElement>(null);
-  const tryAgainSoundElement = useRef<HTMLAudioElement>(null);
-  const congratsSoundElement = useRef<HTMLAudioElement>(null);
 
   const handleLogout = () => {
     setGameStarted(false);
@@ -40,6 +34,10 @@ const Guess = (): JSX.Element => {
   };
 
   const handleNextTerm = (): void => {
+    if (answer.trim() === "") {
+      return;
+    }
+
     const currentTerm = terms[currentTermIndex];
     if (answer.toLowerCase() === currentTerm.answer.toLowerCase()) {
       setScore((prevScore) => prevScore + 1);
@@ -56,13 +54,6 @@ const Guess = (): JSX.Element => {
         )
       );
     }
-  };
-
-  const handleNextButtonClick = (): void => {
-    if (answer.trim() === "") {
-      return;
-    }
-    handleNextTerm();
   };
 
   const restartGame = (): void => {
@@ -90,14 +81,6 @@ const Guess = (): JSX.Element => {
           prevTimers.map((timer, index) => {
             if (index === currentTermIndex && timer === 1) {
               clearInterval(countdown);
-              handleNextTerm();
-            } else if (index === currentTermIndex && timer === 6) {
-              if (
-                timerSoundElement.current &&
-                timerSoundElement.current.paused
-              ) {
-                timerSoundElement.current.play();
-              }
             }
             return index === currentTermIndex ? timer - 1 : timer;
           })
@@ -106,29 +89,20 @@ const Guess = (): JSX.Element => {
 
       return () => {
         clearInterval(countdown);
-        if (timerSoundElement.current) {
-          timerSoundElement.current.pause();
-          timerSoundElement.current.currentTime = 0;
-        }
       };
     }
   }, [gameStarted, gameOver, currentTermIndex]);
 
   useEffect(() => {
     if (isPassingScore && gameOver) {
-      if (congratsSoundElement.current && congratsSoundElement.current.paused) {
-        congratsSoundElement.current.play();
-      }
+      console.log("Congratulations! You Passed the Quiz!");
     } else if (!isPassingScore && gameOver) {
+      console.log("You Didn't Pass the Quiz!");
       setTryAgain(true);
-      if (tryAgainSoundElement.current && tryAgainSoundElement.current.paused) {
-        tryAgainSoundElement.current.play();
-      }
     }
   }, [score, gameOver, isPassingScore]);
 
   const scoreProgress = `${Math.round((score / terms.length) * 100)}%`;
-  // const scoreDisplay = `${score}/${terms.length}`;
   const scoreProgressClassName = isPassingScore ? "bg-blue-500" : "bg-red-500";
   const scoreDisplayClassName = isPassingScore ? "" : "text-red-500";
 
@@ -190,7 +164,7 @@ const Guess = (): JSX.Element => {
                       />
                     </div>
                     <button
-                      onClick={handleNextButtonClick}
+                      onClick={handleNextTerm}
                       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-x2"
                     >
                       Submit
@@ -215,7 +189,6 @@ const Guess = (): JSX.Element => {
                           {scoreProgress}
                         </div>
                       </div>
-                      {/* <p className={`text-white ml-1 font-bold text-xs ${scoreProgressClassName}`}>{scoreDisplay}</p> */}
                     </div>
                     <div className="flex items-center justify-center mt-2">
                       {isPassingScore ? (
@@ -287,13 +260,13 @@ const Guess = (): JSX.Element => {
                           ))}
                         </div>
                         <p className="text-orange-500 text-center text-xl font-bold mt-10">
-                          You're awesome!
+                          Well Done!
                         </p>
                         <button
                           onClick={restartGame}
-                          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5"
+                          className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded mt-5"
                         >
-                          Restart
+                          Play Again
                         </button>
                       </>
                     )}
@@ -304,9 +277,6 @@ const Guess = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <audio ref={timerSoundElement} src={timerSound} />
-      <audio ref={tryAgainSoundElement} src={tryagainSound} />
-      <audio ref={congratsSoundElement} src={congratsSound} />
     </div>
   );
 };
