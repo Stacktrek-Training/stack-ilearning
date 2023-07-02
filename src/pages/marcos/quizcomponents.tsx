@@ -40,7 +40,7 @@ const QuizGame: React.FC = () => {
         clearTimeout(timer);
       }
     };
-  }, [timeRemaining, showResult]);
+  });
 
   const handleAnswer = (option: string) => {
     const question = questions[currentQuestion];

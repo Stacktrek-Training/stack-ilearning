@@ -15,7 +15,7 @@ import AuthenticationPage from "./pages/authentication/Loginpage";
 import DragGame from "./pages/rene/Drag";
 import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
-
+import QuizComponent from "./pages/marcos/quizcomponents";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -71,6 +71,11 @@ const router = createBrowserRouter([
   {
     path: "/games/ColorCodeExercise",
     element: <ColorCodeExercise />,
+  },
+
+  {
+    path: "/games/quizcomponent",
+    element: <QuizComponent />,
   },
 ]);
 
