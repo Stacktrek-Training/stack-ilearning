@@ -15,7 +15,8 @@ import AuthenticationPage from "./pages/authentication/Loginpage";
 import DragGame from "./pages/rene/Drag";
 import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
-import GuessGame from "./pages/eljohn/Guess";
+
+import QuizComponent from "./pages/marcos/quizcomponents";
 
 const router = createBrowserRouter([
   {
@@ -73,9 +74,10 @@ const router = createBrowserRouter([
     path: "/games/ColorCodeExercise",
     element: <ColorCodeExercise />,
   },
+
   {
-    path: "/games/GuessTheWord",
-    element: <GuessGame />,
+    path: "/games/quizcomponent",
+    element: <QuizComponent />,
   },
 ]);
 

@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-secondary: hsla(182, 63%, 54%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+}
+:focus {
+  outline: 3px var(--clr-grey-2) solid;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 45, 120, 0.05926120448179273) 0%,
+    rgba(0, 38, 140, 1) 0%,
+    rgba(0, 32, 156, 0.6194852941176471) 55%,
+    rgba(0, 32, 156, 0.6194852941176471) 59%
+  );
+  font-family: var(--ff-secondary);
+  padding: 1rem 0.5rem;
+}
+.heading {
+  color: var(--clr-red-light);
+  font-size: 2rem;
+}
+
+.quiz-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 20px;
+  background-color: var(--clr-grey-10);
+  border-radius: 8px;
+  box-shadow: 0 8px 6px rgba(16, 78, 122, 0.87);
+}
+.sidebar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-left: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.timer {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.hint {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #888888;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.option-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  column-gap: 2rem;
+}
+.option-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eeeeee;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 10px;
+  text-transform: lowercase;
+}
+
+.option-button:hover {
+  background-color: var(--clr-primary-9);
+}
+
+.option-button.correct {
+  background-color: var(--clr-green-dark);
+  color: var(--clr-white);
+}
+
+.option-button.incorrect {
+  background-color: var(--clr-red-dark);
+  color: var(--clr-white);
+}
+
+.selected-answer {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.correct-answer {
+  color: #4caf50;
+  background: none;
+}
+
+.incorrect-answer {
+  color: #f44336;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1976d2;
+}
+
+.result-text {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.result-score {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.result-buttons button {
+  margin-left: 10px;
+}
