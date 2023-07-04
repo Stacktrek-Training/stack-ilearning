@@ -186,20 +186,22 @@ const QuizGame: React.FC = () => {
   }
 
   useEffect(() => {
-    shuffleQuestions();
-  }, []);
+    const shuffleQuestions = (): void => {
+      const shuffledQuestions = [...questions];
+      for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledQuestions[i], shuffledQuestions[j]] = [
+          shuffledQuestions[j],
+          shuffledQuestions[i],
+        ];
+      }
+      setQuestions(shuffledQuestions);
+    };
 
-  const shuffleQuestions = (): void => {
-    const shuffledQuestions = [...questions];
-    for (let i = shuffledQuestions.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledQuestions[i], shuffledQuestions[j]] = [
-        shuffledQuestions[j],
-        shuffledQuestions[i],
-      ];
-    }
-    setQuestions(shuffledQuestions);
-  };
+    // Shuffle questions only on component mount (refresh)
+    shuffleQuestions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleDragStart = (
     event: React.DragEvent<HTMLLIElement>,
@@ -334,7 +336,9 @@ const QuizGame: React.FC = () => {
         Progress: {(currentQuestion / questions.length) * 100}%
       </div>
       {wrongAnswerVisible && (
-        <div className="wrong-answer">Wrong answer. Try again! -3 points</div>
+        <div className="wrong-answer">
+          Whoops! Wrong answer. Try again! -3 points
+        </div>
       )}
       <div className="score">
         Score: {score} / {questions.length * 10}
