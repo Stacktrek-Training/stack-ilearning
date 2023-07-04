@@ -14,8 +14,8 @@ import TypingGame from "./pages/Typing_Game/TheCoder/App";
 import AuthenticationPage from "./pages/authentication/Loginpage";
 import DragGame from "./pages/rene/Drag";
 import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
+import DragQuiz from "./pages/Nico/quizGame";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
-
 import QuizComponent from "./pages/marcos/quizcomponents";
 
 const router = createBrowserRouter([
@@ -61,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: "/games/DragGame",
     element: <DragGame />,
+  },
+  {
+    path: "/games/DragQuiz",
+    element: <DragQuiz />,
   },
   {
     path: "/games/TypingGame",
