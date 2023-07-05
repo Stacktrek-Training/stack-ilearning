@@ -14,8 +14,10 @@ import TypingGame from "./pages/Typing_Game/TheCoder/App";
 import AuthenticationPage from "./pages/authentication/Loginpage";
 import DragGame from "./pages/rene/Drag";
 import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
+import DragQuiz from "./pages/Nico/quizGame";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
 import TRUEorFALSE from "./pages/trisha/API";
+import QuizComponent from "./pages/marcos/quizcomponents";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +64,10 @@ const router = createBrowserRouter([
     element: <DragGame />,
   },
   {
+    path: "/games/DragQuiz",
+    element: <DragQuiz />,
+  },
+  {
     path: "/games/TypingGame",
     element: <TypingGame />,
   },
@@ -76,6 +82,11 @@ const router = createBrowserRouter([
   {
     path: "/games/TRUEorFALSE",
     element: <TRUEorFALSE />,
+
+  },
+  {
+    path: "/games/quizcomponent",
+    element: <QuizComponent />,
   },
 ]);
 
