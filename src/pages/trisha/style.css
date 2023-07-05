@@ -1,142 +1,142 @@
 .TRUEorFALSE {
-    text-align: center;
+  text-align: center;
 }
 
 .trivia {
-    margin-top: 20px;
-    font-size: 30px;
-    font-family: cursive;
-    color: rgb(218, 167, 72);
-
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: cursive;
+  color: rgb(218, 167, 72);
 }
 
 .question-card {
-    /* Center the div  */
-    margin: 0 auto;
-    margin-top: 3rem;
+  /* Center the div  */
+  margin: 0 auto;
+  margin-top: 3rem;
 
-    /* Dimensions  */
-    width: 92%;
-    /* Can be in percentage also. */
-    height: auto;
+  /* Dimensions  */
+  width: 92%;
+  /* Can be in percentage also. */
+  height: auto;
 
-    /* Visual  */
-    background-image: url("bglogo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 160px;
-    border-radius: 16px;
-    color: wheat;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  /* Visual  */
+  background-image: url("bglogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 160px;
+  border-radius: 16px;
+  color: wheat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .question-card ul {
-    padding-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .question-card h1 {
-    font-family: monospace;
-    padding-top: 10px;
-    font-size: 40px;
-    font-stretch: expanded;
-    font-weight: bolder;
-    margin-top: 1rem;
-    color: rgb(255, 255, 255);
+  font-family: monospace;
+  padding-top: 10px;
+  font-size: 40px;
+  font-stretch: expanded;
+  font-weight: bolder;
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
 }
 
 .question-card h2 {
-    font-family: cursive;
-    font-size: larger;
-    color: #ff7a0d;
+  font-family: cursive;
+  font-size: larger;
+  color: #ff7a0d;
 }
 
 .QUIZ ul {
-    list-style-type: disc;
-    color: rgb(3, 3, 3);
-    font-style: initial;
-    font-weight: bold;
+  list-style-type: disc;
+  color: rgb(3, 3, 3);
+  font-style: initial;
+  font-weight: bold;
 }
 
 .QUIZ li {
-    margin-top: 10px;
-    background-color: #ff7a0dae;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 23px;
+  margin-top: 10px;
+  background-color: #ff7a0dae;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 23px;
 }
 
 .QUIZ li:hover {
-    background-color: rgb(1, 5, 255);
-    color: #ff7300ae;
-    cursor: pointer;
+  background-color: rgb(1, 5, 255);
+  color: #ff7300ae;
+  cursor: pointer;
 }
 
 .question-text {
-    color: rgb(255, 255, 255);
-    color-scheme: orange;
-    font-size: 30px;
-    font-weight: bold;
-    padding-top: 8px;
-    font-family: cursive;
+  color: rgb(255, 255, 255);
+  color-scheme: orange;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 8px;
+  font-family: cursive;
 }
 
 /* Final Results  */
 
 .result {
-    /* Center the div  */
-    margin: 0 auto;
+  /* Center the div  */
+  margin: 0 auto;
 
-    /* Dimensions  */
-    width: 100%;
-    height: auto;
-    margin-top: 0px;
+  /* Dimensions  */
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
 
-    /* Visual  */
-    background-image: url("bg2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 231px;
-    color: white(255, 255, 255);
-    box-shadow: rgba(202, 218, 64, 0.25) 0px 30px 60px -12px,
-        rgba(255, 255, 255, 0.3) 0px 18px 36px -18px;
+  /* Visual  */
+  background-image: url("bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 231px;
+  color: white(255, 255, 255);
+  box-shadow: rgba(202, 218, 64, 0.25) 0px 30px 60px -12px,
+    rgba(255, 255, 255, 0.3) 0px 18px 36px -18px;
 }
 
 .result h1 {
-    font-weight: bold;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 70px;
-    color: #ff7a0dae;
-    margin-top: 10px;
-    /* Adjust the value to move it down */
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 70px;
+  color: #ff7a0dae;
+  margin-top: 10px;
+  /* Adjust the value to move it down */
 }
 
 .result h2 {
-    font-weight: bold;
-    font-size: 30px;
-    font-family: monospace;
-    color: darkgoldenrod;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: monospace;
+  color: darkgoldenrod;
 }
 
 .result h3 {
-    font-weight: bold;
-    font-style: oblique;
-    font-size: 20px;
-    color: darkgoldenrod;
+  font-weight: bold;
+  font-style: oblique;
+  font-size: 20px;
+  color: darkgoldenrod;
 }
 
 .QUIZ button {
-    background-color: #ff7a0dae;
-    border: 15px;
-    color: rgb(38, 35, 212);
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: dotted;
-    display: inline-block;
-    font-size: 25px;
-    font-weight: bold;
-    margin-top: 3rem;
-    font-weight: BOLD;
-    border-radius: 24px;
+  background-color: #ff7a0dae;
+  border: 15px;
+  color: rgb(38, 35, 212);
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: dotted;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 3rem;
+  font-weight: BOLD;
+  border-radius: 24px;
 }
