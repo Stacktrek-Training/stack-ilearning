@@ -17,6 +17,7 @@ import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
 import DragQuiz from "./pages/Nico/quizGame";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
 import QuizComponent from "./pages/marcos/quizcomponents";
+import TRUEorFALSE from "./pages/trisha/API";
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,11 @@ const router = createBrowserRouter([
   {
     path: "/games/quizcomponent",
     element: <QuizComponent />,
+  },
+
+  {
+    path: "/games/TRUEorFALSE",
+    element: <TRUEorFALSE />,
   },
 ]);
 
