@@ -25,3 +25,7 @@ dist-ssr
 
 public
 src/assets
+
+*.png
+*.jpg
+*.svg
