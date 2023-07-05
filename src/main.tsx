@@ -16,7 +16,10 @@ import DragGame from "./pages/rene/Drag";
 import APIQuiz from "./pages/uly/QuizTrek/APIquiz";
 import DragQuiz from "./pages/Nico/quizGame";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
+<<<<<<< HEAD
 import QuizComponent from "./pages/marcos/quizcomponents";
+=======
+>>>>>>> 68f4f716ce5f9ec0107a6880e068b0fe7095a9b9
 import TRUEorFALSE from "./pages/trisha/API";
 
 const router = createBrowserRouter([
@@ -79,6 +82,7 @@ const router = createBrowserRouter([
     path: "/games/ColorCodeExercise",
     element: <ColorCodeExercise />,
   },
+<<<<<<< HEAD
 
   {
     path: "/games/quizcomponent",
@@ -89,6 +93,12 @@ const router = createBrowserRouter([
     path: "/games/TRUEorFALSE",
     element: <TRUEorFALSE />,
   },
+=======
+  {
+    path: "/games/TRUEorFALSE",
+    element: <TRUEorFALSE />,
+  }
+>>>>>>> 68f4f716ce5f9ec0107a6880e068b0fe7095a9b9
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
