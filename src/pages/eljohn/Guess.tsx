@@ -13,6 +13,7 @@ const Guess = (): JSX.Element => {
   const [timers, setTimers] = useState(terms.map(() => 20));
   const [tryAgain, setTryAgain] = useState(false);
   const [username, setUsername] = useState("");
+  const [timerExpired, setTimerExpired] = useState(false);
 
   const handleLogout = () => {
     setGameStarted(false);
@@ -34,10 +35,6 @@ const Guess = (): JSX.Element => {
   };
 
   const handleNextTerm = (): void => {
-    if (answer.trim() === "") {
-      return;
-    }
-
     const currentTerm = terms[currentTermIndex];
     if (answer.toLowerCase() === currentTerm.answer.toLowerCase()) {
       setScore((prevScore) => prevScore + 1);
@@ -53,6 +50,7 @@ const Guess = (): JSX.Element => {
           index === currentTermIndex ? 20 : timer
         )
       );
+      setTimerExpired(false);
     }
   };
 
@@ -81,6 +79,7 @@ const Guess = (): JSX.Element => {
           prevTimers.map((timer, index) => {
             if (index === currentTermIndex && timer === 1) {
               clearInterval(countdown);
+              setTimerExpired(true);
             }
             return index === currentTermIndex ? timer - 1 : timer;
           })
@@ -106,6 +105,29 @@ const Guess = (): JSX.Element => {
   const scoreProgressClassName = isPassingScore ? "bg-blue-500" : "bg-red-500";
   const scoreDisplayClassName = isPassingScore ? "" : "text-red-500";
 
+  const renderButton = () => {
+    if (timerExpired && !gameOver) {
+      return (
+        <button
+          onClick={handleNextTerm}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-1"
+        >
+          Next
+        </button>
+      );
+    } else {
+      return (
+        <button
+          onClick={handleNextTerm}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-1"
+          disabled={answer.trim() === "" && !timerExpired}
+        >
+          Submit
+        </button>
+      );
+    }
+  };
+
   return (
     <div className="bg-gray-900 min-h-screen">
       <Navbar
@@ -115,7 +137,7 @@ const Guess = (): JSX.Element => {
         restartGame={restartGame}
       />
       <div className="bg-gray-800 min-h-screen flex items-center justify-center">
-        <div className="container mx-auto px-4 py-8 flex flex-col items-center bg-gray-900 rounded-lg shadow-1g mt-x1 square-container">
+        <div className="background mx-auto px-4 py-8 flex flex-col items-center bg-gray-900 rounded-lg shadow-1g mt-x1 square-background">
           <div className="square-content text-center">
             {!gameOver && (
               <p className="text-3xl mb-8 text-white text-center pulsing-text">
@@ -159,16 +181,12 @@ const Guess = (): JSX.Element => {
                         onChange={handleAnswerChange}
                         className="border rounded py-2 px-3 text-center text-lg"
                         style={{ width: "200px", height: "50px" }}
-                        disabled={gameOver}
+                        disabled={gameOver || timerExpired}
                         required
                       />
                     </div>
-                    <button
-                      onClick={handleNextTerm}
-                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-x2"
-                    >
-                      Submit
-                    </button>
+                    {renderButton()}{" "}
+                    {/* Render the button based on the timerExpired condition */}
                     <p
                       className={`text-stacktrek mt-1 font-bold text-sm ${
                         timers[currentTermIndex] <= 5 &&
@@ -181,7 +199,7 @@ const Guess = (): JSX.Element => {
                     >
                       Time Left: {timers[currentTermIndex]} seconds
                     </p>
-                    <div className="flex items-center justify-center mt-5">
+                    <div className="flex items-center justify-center mt-1">
                       <div className="w-12 bg-gray-300 rounded-full">
                         <div
                           className={`${scoreProgressClassName} text-xs leading-none py-1 text-center text-white rounded-full`}
@@ -205,7 +223,7 @@ const Guess = (): JSX.Element => {
                     </div>
                   </div>
                 ) : (
-                  <div className="text-center">
+                  <div className="flex flex-col items-center">
                     {tryAgain ? (
                       <>
                         <p className="text-3xl mb-10 text-white text-center animation-bounce">
@@ -219,7 +237,7 @@ const Guess = (): JSX.Element => {
                         <p className="text-white text-center text-2xl font-bold">
                           Scoring: {scoringPercentage}%
                         </p>
-                        <div className="stars-container">
+                        <div className="stars">
                           {[...Array(score)].map((_, index) => (
                             <div key={index} className="star-animation">
                               X
@@ -238,7 +256,7 @@ const Guess = (): JSX.Element => {
                       </>
                     ) : (
                       <>
-                        <p className="text-3xl mb-10 text-white text-center animation-bounce ">
+                        <p className="text-3xl mb-10 text-white text-center animation-bounce">
                           <span className="text-blue-600 font-bold text-4xl">
                             Congratulations!{" "}
                           </span>
@@ -259,7 +277,7 @@ const Guess = (): JSX.Element => {
                             </div>
                           ))}
                         </div>
-                        <p className="text-orange-500 text-center text-xl font-bold mt-10">
+                        <p className="text-orange-500 text-center text-xl font-bold mt-5">
                           Well Done!
                         </p>
                         <button
