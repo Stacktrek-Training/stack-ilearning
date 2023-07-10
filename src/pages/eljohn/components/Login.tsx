@@ -27,7 +27,7 @@ const Login = ({ startGame, setUsername }: LoginProps): JSX.Element => {
   };
 
   return (
-    <div className="text-center">
+    <div className="flex flex-col items-center">
       {isUsernameEntered ? (
         <>
           <button
@@ -45,7 +45,7 @@ const Login = ({ startGame, setUsername }: LoginProps): JSX.Element => {
               type="text"
               value={usernameInput}
               onChange={handleUsernameChange}
-              className="border rounded py-1 px-2 text-center text-m"
+              className="border rounded py-1 px-2 text-center text-xs"
               placeholder="Enter your username"
               style={{ width: "200px", height: "50px" }}
               maxLength={6}

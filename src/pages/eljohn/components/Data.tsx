@@ -26,7 +26,7 @@ export const terms = [
   },
   {
     question:
-      "Which programming language is commonly used for developing blockchain applications and smart contracts?",
+      "Common programming language for blockchain apps and smart contracts?",
     answer: "SOLIDITY",
   },
   {
