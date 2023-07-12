@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  max-width: 860px;
+  margin: 40px auto;
+  color: white;
+}
+
+body {
+  background-color: rgb(221, 100, 44);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  margin: 40px auto;
+}
+
+button {
+  background: rgb(66, 41, 158);
+  color: rgb(255, 178, 90);
+  border: 2px solid rgb(255, 178, 90);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover{
+  background-color: darkblue;
+  color: orangered;
+}
+
+.Logo {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.balls-grid{
+  justify-content: center;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 150px 150px 150px 150px;
+  grid-gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.front{
+  height: 100px;
+  width: 100px;
+}
+
+.back{
+  height: 100px;
+  width: 100px;
+}
