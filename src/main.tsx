@@ -18,6 +18,7 @@ import DragQuiz from "./pages/Nico/quizGame";
 import ColorCodeExercise from "./pages/uly/ColorCode/App";
 import TRUEorFALSE from "./pages/trisha/API";
 import QuizComponent from "./pages/marcos/quizcomponents";
+import MemoryGame from "./pages/Maui-flipper/App"
 
 const router = createBrowserRouter([
   {
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
     path: "/games/quizcomponent",
     element: <QuizComponent />,
   },
+  {
+    path: "/games/PokeMemory",
+    element: <MemoryGame />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

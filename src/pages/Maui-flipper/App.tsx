@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import React from 'react';
 import SingleCard from './components/SingleCard';
 
 interface Ball {
