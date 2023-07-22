@@ -20,6 +20,7 @@ import TRUEorFALSE from "./pages/trisha/API";
 import QuizComponent from "./pages/marcos/quizcomponents";
 import GuessWord from "./pages/eljohn/Guess";
 import Main from "./pages/sagun/App";
+import Hangman from "./pages/erica/App";
 
 const router = createBrowserRouter([
   {
@@ -96,6 +97,10 @@ const router = createBrowserRouter([
   {
     path: "/games/BinaryChallege",
     element: <Main />,
+  },
+  {
+    path: "/games/Hangman",
+    element: <Hangman />,
   },
 ]);
 
