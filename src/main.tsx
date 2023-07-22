@@ -19,6 +19,7 @@ import ColorCodeExercise from "./pages/uly/ColorCode/App";
 import TRUEorFALSE from "./pages/trisha/API";
 import QuizComponent from "./pages/marcos/quizcomponents";
 import GuessWord from "./pages/eljohn/Guess";
+import Main from "./pages/sagun/App";
 
 const router = createBrowserRouter([
   {
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
   {
     path: "/games/GuessTheWord",
     element: <GuessWord />,
+  },
+  {
+    path: "/games/BinaryChallege",
+    element: <Main />,
   },
 ]);
 
